@@ -11,7 +11,7 @@ export default class ToDo extends Component{
 
   render(){
     return (
-      <View>
+      <View style={styles.container}>    
         <TouchableOpacity>
           <View style={styles.circle} />
         </TouchableOpacity>
