@@ -1,13 +1,22 @@
-import React from 'react';
-import { StyleSheet, Text, View, StatusBar, TextInput, Dimensions, Platform, ScrollView } from 'react-native';
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  TextInput,
+  Dimensions,
+  Platform,
+  ScrollView
+} from "react-native";
 
-import ToDo from './ToDo';
+import ToDo from "./ToDo";
 
-const {height, width} = Dimensions.get("window");
+const { height, width } = Dimensions.get("window");
 
 export default class App extends React.Component {
   state = {
-      newToDo: ""
+    newToDo: ""
   };
 
   render() {
@@ -15,7 +24,7 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content"/>
+        <StatusBar barStyle="light-content" />
         <Text style={styles.title}>To Do</Text>
         <View style={styles.card}>
           <TextInput
@@ -27,7 +36,7 @@ export default class App extends React.Component {
             returnKeyType={"done"}
           />
           <ScrollView contentContainerStyle={styles.toDos}>
-            <ToDo/>
+            <ToDo text={"Hello I am a To Do!"} />
           </ScrollView>
         </View>
       </View>
@@ -44,8 +53,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f23657',
-    alignItems: 'center'
+    backgroundColor: "#f23657",
+    alignItems: "center"
   },
   title: {
     color: "white",
@@ -71,8 +80,8 @@ const styles = StyleSheet.create({
           width: 0
         }
       },
-      android : {
-        elevation: 5,
+      android: {
+        elevation: 5
       }
     })
   },
@@ -85,5 +94,4 @@ const styles = StyleSheet.create({
   toDos: {
     alignItems: "center"
   }
-
 });
